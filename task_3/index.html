@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulir pendaftaran workshop Informatika ITERA.">
+    <title>Pendaftaran Workshop Informatika ITERA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="Beranda Workshop Informatika ITERA">
+                <span class="brand-mark">IT</span>
+                <span>Workshop Informatika ITERA</span>
+            </a>
+            <nav aria-label="Navigasi utama">
+                <a class="active" aria-current="page" href="index.html">Pendaftaran</a>
+                <a href="detail.html">Data Peserta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-layout">
+        <section class="intro-section" aria-labelledby="page-title">
+            <p class="eyebrow">Tugas Individu 3 - PAW</p>
+            <h1 id="page-title">Daftar Workshop Informatika</h1>
+            <p class="lead">Tingkatkan kemampuan digitalmu melalui workshop praktis bersama mahasiswa Informatika ITERA.</p>
+
+            <div class="info-box">
+                <h2>Yang Akan Kamu Dapatkan</h2>
+                <ul>
+                    <li>Materi dasar pengembangan web.</li>
+                    <li>Latihan langsung bersama mentor.</li>
+                    <li>Sertifikat peserta kegiatan.</li>
+                </ul>
+            </div>
+
+            <p class="query-note">Formulir menggunakan method <strong>GET</strong>. Saat dikirim, browser membentuk query string pada URL halaman detail tanpa membaca atau menyimpan data tersebut.</p>
+        </section>
+
+        <section class="form-card" aria-labelledby="form-title">
+            <h2 id="form-title">Formulir Pendaftaran</h2>
+            <p>Isi seluruh data dengan benar untuk melanjutkan pendaftaran.</p>
+
+            <form action="detail.html" method="get">
+                <label for="nama">Nama lengkap</label>
+                <input id="nama" name="nama" type="text" placeholder="Masukkan nama lengkap" autocomplete="name" required>
+
+                <label for="nim">NIM</label>
+                <input id="nim" name="nim" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="Contoh: 123140000" autocomplete="off" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+
+                <label for="prodi">Program studi</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="" selected disabled>Pilih program studi</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Teknik Elektro">Teknik Elektro</option>
+                    <option value="Teknik Industri">Teknik Industri</option>
+                </select>
+
+                <label for="workshop">Pilihan workshop</label>
+                <select id="workshop" name="workshop" required>
+                    <option value="" selected disabled>Pilih workshop</option>
+                    <option value="Dasar Pemrograman Web">Dasar Pemrograman Web</option>
+                    <option value="UI UX untuk Pemula">UI UX untuk Pemula</option>
+                    <option value="Pengolahan Data Python">Pengolahan Data Python</option>
+                </select>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Workshop Informatika ITERA</p>
+        </div>
+    </footer>
+</body>
+</html>
